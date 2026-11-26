@@ -4,6 +4,7 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 import { useThemeColors } from '../hooks/useThemeColors';
 import { swissBg } from '../assets';
 import BackButton from '../components/BackButton';
+import Footer from '../components/Footer';
 import { socialLinks } from '../config/socialLinks';
 
 const Contact = () => {
@@ -42,7 +43,7 @@ const Contact = () => {
   return (
     <section
       aria-label="Contact page"
-      className="flex-1 min-h-screen -mt-[70px] pt-[98px] md:-mt-[80px] md:pt-[116px] pb-20 transition-colors duration-300 relative overflow-hidden flex flex-col"
+      className="flex-1 min-h-screen -mt-[70px] pt-[98px] md:-mt-[80px] md:pt-[116px] transition-colors duration-300 relative overflow-hidden flex flex-col"
     >
       {/* Dreamy Frosted Sky Background */}
       <div
@@ -63,7 +64,7 @@ const Contact = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 max-w-5xl relative z-10 flex-1 flex flex-col justify-center">
+      <div className="container mx-auto px-6 max-w-5xl relative z-10 flex-1 flex flex-col justify-center pb-12">
         {/* Back Button */}
         <div>
           <BackButton
@@ -185,6 +186,10 @@ const Contact = () => {
           </article>
 
         </section>
+      </div>
+
+      <div className="relative z-10 mt-auto">
+        <Footer />
       </div>
     </section>
   );

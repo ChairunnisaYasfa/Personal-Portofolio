@@ -31,18 +31,18 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full py-5 mt-auto transition-colors duration-300" style={{ background: 'transparent' }}>
+    <footer className="w-full py-6 mt-auto bg-transparent border-0 shadow-none transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
           {/* Left - Made with heart and copyright (centered on mobile) */}
           <div className="flex flex-col items-center md:items-start space-y-1 md:flex-1">
-            <div className="flex items-center" style={{ color: isDarkMode ? themeColors.colors.pink[100] : themeColors.colors.pink[800] }}>
+            <div className="flex items-center" style={{ color: isDarkMode ? themeColors.colors.pink[100] : '#6B4C57' }}>
               <span className="text-sm font-bold">
                 Made with
                 <span className="mx-1" style={{ color: isDarkMode ? themeColors.colors.pink[300] : themeColors.colors.pink[600] }}>˚ʚ♡ɞ˚</span>
               </span>
             </div>
-            <div className="text-xs sm:text-sm font-bold" style={{ color: isDarkMode ? themeColors.colors.pink[100] : themeColors.colors.pink[800] }}>
+            <div className="text-xs sm:text-sm font-bold" style={{ color: isDarkMode ? themeColors.colors.pink[100] : '#6B4C57' }}>
               © {currentYear} Chaeraa. All rights reserved.
             </div>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
             >
               <ArrowUp size={17} />
             </button>
-            <span className="text-xs mt-1 font-bold" style={{ color: isDarkMode ? themeColors.colors.pink[200] : themeColors.colors.pink[700] }}>
+            <span className="text-xs mt-1 font-bold" style={{ color: isDarkMode ? themeColors.colors.pink[200] : '#6B4C57' }}>
               back to top
             </span>
           </div>

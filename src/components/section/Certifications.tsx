@@ -73,7 +73,7 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="py-8 relative" style={{
-      background: themeColors.background.sections?.certifications || themeColors.background.gradient,
+      background: 'transparent',
       transition: 'background 0.3s ease-in-out'
     }}>
       <div className="container mx-auto px-6 relative" style={{ zIndex: 2 }}>

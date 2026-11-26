@@ -77,9 +77,21 @@ function HomePage() {
       <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
         <Skills />
       </Suspense>
-      <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
-        <Certifications />
-      </Suspense>
+      <div
+        style={{
+          background: isDarkMode
+            ? themeColors.background.gradientEnd
+            : 'linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 45%, #FFF8FA 78%, #FAE8ED 100%)',
+          transition: 'background 0.3s ease-in-out',
+        }}
+      >
+        <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading...</div>}>
+          <Certifications />
+        </Suspense>
+        <Suspense fallback={<div className="h-32 flex items-center justify-center">Loading...</div>}>
+          <Footer />
+        </Suspense>
+      </div>
     </>
   )
 }
@@ -111,9 +123,6 @@ function AppContent() {
             </Routes>
           </Suspense>
         </main>
-        <Suspense fallback={<div className="h-32 flex items-center justify-center">Loading...</div>}>
-          <Footer />
-        </Suspense>
       </div>
     </>
   )
