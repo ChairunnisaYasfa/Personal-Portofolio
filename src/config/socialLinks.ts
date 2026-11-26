@@ -1,9 +1,10 @@
 // Social Links Configuration - uses environment variables only
 export const socialLinks = {
   // Main social profiles
-  github: import.meta.env.VITE_GITHUB_URL,
-  linkedin: import.meta.env.VITE_LINKEDIN_URL,
-  email: import.meta.env.VITE_EMAIL,
+  github: import.meta.env.VITE_GITHUB_URL || 'https://github.com/ChairunnisaYasfa',
+  linkedin: import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/chairunnisayasfag/',
+  instagram: import.meta.env.VITE_INSTAGRAM_URL || 'https://www.instagram.com/naneunchaa_',
+  email: import.meta.env.VITE_EMAIL || 'chairunnisa135077@gmail.com',
   
   // GitHub repository URLs
   repositories: {
@@ -15,9 +16,10 @@ export const socialLinks = {
   
   // Formatted display names (extracted from environment variables)
   display: {
-    github: import.meta.env.VITE_GITHUB_URL?.replace('https://github.com/Chairunnisa3312411036', ''),
-    linkedin: import.meta.env.VITE_LINKEDIN_URL?.replace('https://www.linkedin.com/in/chairunnisayasfag', ''),
-    email: import.meta.env.VITE_EMAIL,
+    github: (import.meta.env.VITE_GITHUB_URL || 'https://github.com/ChairunnisaYasfa').replace(/^https?:\/\/(www\.)?github\.com\//, '').replace(/\/$/, ''),
+    linkedin: (import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/chairunnisayasfag/').replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//, '').replace(/\/$/, ''),
+    instagram: (import.meta.env.VITE_INSTAGRAM_URL || 'https://www.instagram.com/naneunchaa_').replace(/^https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/$/, ''),
+    email: import.meta.env.VITE_EMAIL || 'chairunnisa135077@gmail.com',
   }
 };
 

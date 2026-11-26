@@ -155,9 +155,20 @@ const Navigation = () => {
               outline: 'none'
             }}
             onClick={() => window.location.href = '/'}
-            aria-label="Chaeraa - Go to homepage"
+            aria-label="Chaeraa.byte - Go to homepage"
           >
-            Chaeraa
+            <span>Chaeraa</span>
+            <span
+              style={{
+                fontFamily: "system-ui, -apple-system, 'Segoe UI', sans-serif",
+                fontWeight: 800,
+                fontSize: '0.85em',
+                margin: '0 0.04em',
+              }}
+            >
+              .
+            </span>
+            <span>byte</span>
           </button>
 
           {/* Desktop Navigation */}

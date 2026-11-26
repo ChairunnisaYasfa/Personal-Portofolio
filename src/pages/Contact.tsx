@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, Instagram } from 'lucide-react';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import { useThemeColors } from '../hooks/useThemeColors';
 import { swissBg } from '../assets';
@@ -63,7 +63,7 @@ const Contact = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 max-w-4xl relative z-10 flex-1 flex flex-col justify-center">
+      <div className="container mx-auto px-6 max-w-5xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Back Button */}
         <div>
           <BackButton
@@ -92,7 +92,7 @@ const Contact = () => {
         </header>
 
         {/* Contact Cards */}
-        <section className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto w-full" aria-label="Contact methods">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto w-full" aria-label="Contact methods">
           
           {/* Email Card */}
           <article
@@ -159,6 +159,29 @@ const Contact = () => {
               Connect
             </a>
             <p className="text-xs font-medium mt-3" style={{ color: isDarkMode ? themeColors.colors.dark[200] : '#563944' }}>{socialLinks.display.linkedin}</p>
+          </article>
+
+          {/* Instagram Card */}
+          <article
+            className="rounded-2xl backdrop-blur-md p-6 text-center hover:scale-105 transition-all duration-300"
+            style={glassCardStyle}
+            aria-labelledby="instagram-heading"
+          >
+            <div className="flex justify-center mb-4">
+              <Instagram className="h-12 w-12" style={{ color: isDarkMode ? themeColors.colors.pink[300] : themeColors.colors.pink[600] }} aria-hidden="true" />
+            </div>
+            <h3 id="instagram-heading" className="text-xl font-semibold mb-3" style={{ color: isDarkMode ? themeColors.colors.white : '#4E323D' }}>Instagram</h3>
+            <a
+              href={socialLinks.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow on Instagram at @${socialLinks.display.instagram} (opens in new tab)`}
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold transition-all hover:opacity-85"
+              style={cardActionStyle}
+            >
+              Follow
+            </a>
+            <p className="text-xs font-medium mt-3" style={{ color: isDarkMode ? themeColors.colors.dark[200] : '#563944' }}>@{socialLinks.display.instagram}</p>
           </article>
 
         </section>
