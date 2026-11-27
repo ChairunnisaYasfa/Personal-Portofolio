@@ -10,32 +10,32 @@ const Experience = () => {
     {
       title: "Operator Assembly",
       company: "PT. TDK Electronics Indonesia",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      location: "Batam, Indonesia",
+      period: "September 2023 - Present",
       description: [
-        "Description of your role and accomplishments",
+        "Assembled electronic components into finished products following standard operating procedures and quality standards.",
+        "Operated automated machinery and assembly tools to support efficient production workflows.",
       ]
     },
     {
-      title: "Your Job Title",
-      company: "Company Name",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      title: "Field Enumerator / Mobile Data Collector",
+      company: "Badan Pusat Statistik (Contract)",
+      location: "Riau Islands, Indonesia",
+      period: "June 2026 - September 2026",
       description: [
-        "Description of your role and accomplishments",
-        "Another accomplishment or responsibility",
-        "One more key achievement",
+        "Collected and verified economic census data through field surveys and direct interviews with business owners in accordance with the Standard Operating Procedures (SOP) established by Statistics Indonesia (BPS).",
+        "Ensured data accuracy and completeness while maintaining professionalism, effective communication, and confidentiality throughout the data collection process.",
+        "Collaborated with supervisors and fellow enumerators to achieve survey targets within the assigned schedule.",
       ]
     },
     {
-      title: "Your Job Title",
-      company: "Company Name",
-      location: "City, State",
-      period: "Month Year - Month Year",
+      title: "Administrative Assistant (Internship)",
+      company: "CV. Batam Copier",
+      location: "Batam, Indonesia",
+      period: "January 2022 - March 2022",
       description: [
-        "Description of your role and accomplishments",
-        "Another accomplishment or responsibility",
-        "One more key achievement",
+        "Monitored and analyzed production workflows through data processing to ensure schedules were met on time.",
+        "Collaborated with the production team and reported product shortages or improvement ideas directly to supervisors.",
       ]
     }
   ];
@@ -74,18 +74,18 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card key={index} className="border-2 border-pink-100 dark:border-gray-700 hover:border-pink-200 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg bg-white/95 dark:bg-gray-800/95">
               <CardHeader className="pb-2">
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <div>
                     <CardTitle className="text-2xl" style={{ color: isDarkMode ? themeColors.colors.pink[300] : themeColors.colors.pink[400] }}>{exp.title}</CardTitle>
                     <p className="text-lg font-semibold text-gray-700 dark:text-gray-400 mt-1">{exp.company}</p>
                   </div>
-                  <div className="text-right">
-                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-1">
-                      <Calendar className="h-4 w-4" />
+                  <div className="text-left sm:text-right shrink-0">
+                    <div className="flex items-center sm:justify-end gap-2 text-gray-600 dark:text-gray-400 mb-1">
+                      <Calendar className="h-4 w-4 shrink-0" />
                       <span className="text-sm">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                      <MapPin className="h-4 w-4" />
+                    <div className="flex items-center sm:justify-end gap-2 text-gray-600 dark:text-gray-400">
+                      <MapPin className="h-4 w-4 shrink-0" />
                       <span className="text-sm">{exp.location}</span>
                     </div>
                   </div>

@@ -31,19 +31,36 @@ const ImageCarousel = ({ images, projectName }: ImageCarouselProps) => {
   };
 
   return (
-    <div className="rounded-lg p-8 mb-8" style={{ 
-      backgroundColor: themeColors.card.background,
-      boxShadow: isDarkMode ? '0 0 20px rgba(0, 0, 0, 0.3)' : '0 0 20px rgba(0, 0, 0, 0.15)'
-    }}>
-      <h2 className="text-2xl font-semibold mb-6" style={{ color: themeColors.text.primary }}>Project Snapshots</h2>
+    <div
+      className="rounded-2xl backdrop-blur-md p-6 md:p-8 mb-8"
+      style={
+        isDarkMode
+          ? {
+              background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.72) 0%, rgba(15, 23, 42, 0.62) 100%)',
+              border: '1px solid rgba(234, 190, 195, 0.22)',
+              boxShadow: '0 8px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(253, 213, 223, 0.1)',
+            }
+          : {
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 245, 247, 0.75) 100%)',
+              border: '1px solid rgba(234, 190, 195, 0.45)',
+              boxShadow: '0 8px 28px rgba(200, 139, 149, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
+            }
+      }
+    >
+      <h2 className="text-xl md:text-2xl font-semibold mb-6" style={{ color: isDarkMode ? themeColors.colors.pink[100] : '#6B4C57' }}>Project Snapshots</h2>
       
       <div className="relative">
         {/* Main Image Display with Sliding Animation */}
-        <div className="relative rounded-lg overflow-hidden" style={{ 
-          backgroundColor: isDarkMode ? themeColors.colors.dark[900] : themeColors.colors.dark[100],
-          height: '600px',
-          maxHeight: '70vh'
-        }}>
+        <div
+          className="relative rounded-xl overflow-hidden h-[380px] sm:h-[480px] md:h-[560px]"
+          style={{ 
+            backgroundColor: isDarkMode ? 'rgba(15, 23, 42, 0.72)' : 'rgba(255, 245, 247, 0.85)',
+            border: isDarkMode
+              ? '1px solid rgba(234, 190, 195, 0.18)'
+              : '1px solid rgba(234, 190, 195, 0.4)',
+            maxHeight: '70vh'
+          }}
+        >
           <div 
             className="flex transition-transform duration-500 ease-in-out h-full"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -53,7 +70,7 @@ const ImageCarousel = ({ images, projectName }: ImageCarouselProps) => {
                 key={index}
                 src={image} 
                 alt={`${projectName} screenshot ${index + 1}`}
-                className="w-full h-full object-contain flex-shrink-0 cursor-pointer"
+                className="w-full h-full object-contain flex-shrink-0 cursor-pointer p-2 sm:p-4"
                 onClick={() => setIsEnlarged(true)}
                 loading="lazy"
                 width="800"

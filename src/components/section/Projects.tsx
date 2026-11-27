@@ -230,36 +230,28 @@ const Projects = () => {
   const projects = [
     {
       title: "CryptoWise Mobile",
-      description: "Platform Edukasi Literasi Aset Kripto Berbasis Gamifikasi dan Real-Time Simulation",
-      technologies: ["Flutter", "Dart", "C++", "CMake"],
+      description: "Gamified cryptocurrency literacy mobile app featuring Edu-Quests, live market data, and virtual trading simulations.",
+      technologies: ["Flutter", "Dart", "Firebase", "CoinGecko API", "Figma"],
       icon: "/icon/logo.png",
-      detailsUrl: "/projects/cryptowise-mobile",
-      githubUrl: "https://github.com/atalaya3312411022/cryptowise"
+      detailsUrl: "/projects/cryptowise",
+      githubUrl: socialLinks.repositories.projectOne
     },
     {
-      title: "Culinary Website",
-      description: "Website kuliner khas Toba adalah platform yang menyajikan informasi lengkap mengenai ragam kuliner tradisional dari Toba",
-      technologies: ["Python", "Blade", "PHP", "Laravel"],
+      title: "Kuliner Khas Toba (Toba Taste)",
+      description: "Web-based culinary information and ordering platform showcasing authentic traditional dishes from Toba.",
+      technologies: ["Laravel", "PHP", "MySQL", "Midtrans", "Figma"],
       icon: comingSoon,
-      detailsUrl: "/projects/culinary-website",
-      githubUrl: "https://github.com/Daa694/kulinerkhastoba"
+      detailsUrl: "/projects/kuliner-toba",
+      githubUrl: socialLinks.repositories.projectTwo
     },
-    // {
-    //   title: "Project Three",
-    //   description: "A brief description of your third project. Highlight the key features and what makes it unique.",
-    //   technologies: ["JavaScript", "Express", "AWS", "Tailwind CSS"],
-    //   icon: comingSoon,
-    //   detailsUrl: "/projects/project-three",
-    //   githubUrl: socialLinks.repositories.projectThree
-    // },
-    // {
-    //   title: "Project Four",
-    //   description: "A brief description of your fourth project. Highlight the key features and what makes it unique.",
-    //   technologies: ["C++", "CMake", "OpenGL"],
-    //   icon: comingSoon,
-    //   detailsUrl: "/projects/project-four",
-    //   githubUrl: socialLinks.repositories.projectFour
-    // }
+    {
+      title: "JakaAja — Smart Kanteen",
+      description: "Campus canteen mobile ordering system with tenant management, real-time order tracking, and digital payment integration.",
+      technologies: ["Flutter", "Laravel", "MySQL", "Midtrans", "Figma"],
+      icon: comingSoon,
+      detailsUrl: "/projects/jakaaja",
+      githubUrl: socialLinks.repositories.projectThree
+    }
   ];
 
   // Calculate carousel pagination
